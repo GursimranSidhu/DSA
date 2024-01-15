@@ -1,4 +1,3 @@
-
 #include<iostream>
 using namespace std;
 void linearSearch(int arr[],int n,int key)
@@ -24,5 +23,39 @@ int main()
     cout<<"Enter the element to find the index: ";
     cin>>key;
     linearSearch(arr,n,key);
+    return 0;
+}
+
+
+OR
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"Enter the number of elements you want: ";
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter the "<<i<<" element of array: ";
+        cin>>arr[i];
+    }
+    int key;
+    cout<<"Enter the element you want to find in array: ";
+    cin>>key;
+    int ans=-1;
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]==key)
+        {
+            ans=i;
+            break;
+
+        }
+    }
+    cout<<"Index of "<<key<<" is "<<ans;
     return 0;
 }
