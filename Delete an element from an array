@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"Enter the number of elements you want in your array: ";
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter element at "<<i<<" position: ";
+        cin>>arr[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    int position;
+    cout<<"\nEnter the position from where you want to delete the element: ";
+    cin>>position;
+    int item=arr[position-1];
+    for(int i=position-1;i<n-1;i++)
+    {
+        arr[i]=arr[i+1];
+    }
+    n--;
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<"\nDeleted element is "<<item;
+}
